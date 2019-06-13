@@ -6,4 +6,4 @@ This is a page I am creating after having learnt some sass and transitions
 ![inspiration](dist/img/diprella_login.gif)
 
 ## link to final product
-[Live Demo]()
+[Live Demo](https://byarustev.github.io/signup-animated-sass/dist/)
