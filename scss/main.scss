@@ -1,0 +1,164 @@
+@import 'config';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    @include set_background;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+h3, h2, h1 {
+    font-weight: 500;
+    line-height: 1px;
+}
+
+.lg-heading{
+    font-size: 2rem;
+}
+
+main{
+    margin: 10vh auto;
+    width: 55vw;
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 8px;
+
+    .signin-div{
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        'form info';
+        grid-template-columns: 6fr 4fr;
+    }
+
+    .singin-form{
+        text-align: center;
+        padding: 4px;
+        align-items: center;
+        height: 100%;
+        grid-area: form;
+
+        h3{
+            margin-top: 10vh;
+        }
+    }
+
+    .right-info{
+        text-align: center;
+        padding: 8px;
+        align-items: center;
+        height: 100%;
+        grid-area: info;
+        background: $primary-color;
+        border-radius: 0 8px 8px 0;
+
+        h3{
+            margin-top: 20vh;
+        }
+    }
+
+    .signup-div{
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        'info form';
+        grid-template-columns: 4fr 6fr;
+    }
+
+    .left-info{
+        @extend .right-info;
+        border-radius: 8px 0px 0px 8px;
+    }
+
+    .singup-form{
+        @extend .singin-form;
+    }
+
+}
+
+
+.text-white{
+    color: #fff;
+}
+
+.text-primary{
+    color: $primary-color;
+}
+
+.info-text{
+    opacity: 0.7;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn{
+    padding: 5px;
+    width: 150px;
+    height: 40px;
+    background: inherit;
+    border-radius: 20px;
+    border: none;
+    margin: 9px;
+    font-size: 0.8rem;
+    text-transform:uppercase;
+    cursor: pointer;
+}
+
+.btn-to-signup{
+    @extend .btn;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-to-login{
+    @extend .btn-to-signup;
+}
+
+.btn-primary{
+    @extend .btn;
+    color: #fff;
+    background: $primary-color;
+}
+
+.form-input{
+    background:lighten($color: $greyish, $amount: 3);
+    margin: 10px 70px;
+    height: 45px;
+    display: block;
+    text-align: start;
+    i, input{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        background: inherit;
+        border: none;
+        color: darken($color: $greyish, $amount: 50);
+    }
+
+    i{
+        margin-left: 10px;
+    }
+    input{
+        margin-left: 8px;
+        width: 80%;
+        height: 27px;
+        font-size: 15px;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.social-icons{
+    
+    i{
+        color:darken($color: $greyish, $amount: 50);
+        margin: 4px;
+    }
+}

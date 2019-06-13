@@ -1,0 +1,21 @@
+$primary-color: #16a085;
+$bg-color: #444;
+$bg-image: url(../img/nice_bg.jpeg);
+$greyish:#ecf0f1;
+
+@mixin set_background {
+        background: $bg-image;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        &::after{
+            content: " ";
+            position: absolute;
+            top:0;
+            z-index: -1;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($bg-color, 0);
+        }
+}

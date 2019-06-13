@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: url(../img/nice_bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  body::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 68, 68, 0); }
+
+h3, h2, h1 {
+  font-weight: 500;
+  line-height: 1px; }
+
+.lg-heading {
+  font-size: 2rem; }
+
+main {
+  margin: 10vh auto;
+  width: 55vw;
+  height: 70vh;
+  background-color: #fff;
+  border-radius: 8px; }
+  main .signin-div {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'form info';
+    grid-template-columns: 6fr 4fr; }
+  main .singin-form, main .singup-form {
+    text-align: center;
+    padding: 4px;
+    align-items: center;
+    height: 100%;
+    grid-area: form; }
+    main .singin-form h3, main .singup-form h3 {
+      margin-top: 10vh; }
+  main .right-info, main .left-info {
+    text-align: center;
+    padding: 8px;
+    align-items: center;
+    height: 100%;
+    grid-area: info;
+    background: #16a085;
+    border-radius: 0 8px 8px 0; }
+    main .right-info h3, main .left-info h3 {
+      margin-top: 20vh; }
+  main .signup-div {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'info form';
+    grid-template-columns: 4fr 6fr; }
+  main .left-info {
+    border-radius: 8px 0px 0px 8px; }
+
+.text-white {
+  color: #fff; }
+
+.text-primary {
+  color: #16a085; }
+
+.info-text {
+  opacity: 0.7; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.btn, .btn-to-signup, .btn-to-login, .btn-primary {
+  padding: 5px;
+  width: 150px;
+  height: 40px;
+  background: inherit;
+  border-radius: 20px;
+  border: none;
+  margin: 9px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+.btn-to-signup, .btn-to-login {
+  border: 1px solid #fff;
+  color: #fff; }
+
+.btn-primary {
+  color: #fff;
+  background: #16a085; }
+
+.form-input {
+  background: #f5f7f7;
+  margin: 10px 70px;
+  height: 45px;
+  display: block;
+  text-align: start; }
+  .form-input i, .form-input input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: inherit;
+    border: none;
+    color: #5e7980; }
+  .form-input i {
+    margin-left: 10px; }
+  .form-input input {
+    margin-left: 8px;
+    width: 80%;
+    height: 27px;
+    font-size: 15px; }
+    .form-input input:focus {
+      outline: none; }
+
+.social-icons i {
+  color: #5e7980;
+  margin: 4px; }
