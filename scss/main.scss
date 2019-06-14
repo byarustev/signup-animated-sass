@@ -27,11 +27,34 @@ main{
     border-radius: 8px;
 
     .signin-div{
+        z-index: 2;
         height: 100%;
         display: grid;
         grid-template-areas: 
         'form info';
         grid-template-columns: 6fr 4fr;
+        
+        visibility: collapse;
+        &.show{
+            visibility: visible;
+            
+        }
+    }
+
+    .signup-div{
+        z-index: 3;
+        margin-top:-70vh; 
+        height: 100%;
+        
+        display: grid;
+        grid-template-areas: 
+            'info form';
+        grid-template-columns: 4fr 6fr;
+        visibility: collapse;
+
+        &.show{
+            visibility: visible;
+        }
     }
 
     .singin-form{
@@ -40,9 +63,12 @@ main{
         align-items: center;
         height: 100%;
         grid-area: form;
-
         h3{
             margin-top: 10vh;
+        }
+        transform: translate3d(60%, 0, 0);
+        &.show{
+            transform: translate3d(0, 0, 0);
         }
     }
 
@@ -54,27 +80,34 @@ main{
         grid-area: info;
         background: $primary-color;
         border-radius: 0 8px 8px 0;
-
+        @include easeOut;
         h3{
             margin-top: 20vh;
         }
+        transform: translate3d(-150%, 0, 0); // - 100 make it start from left
+        &.show{
+            transform: translate3d(0, 0, 0); //restore
+        }
     }
 
-    .signup-div{
-        height: 100%;
-        display: grid;
-        grid-template-areas: 
-        'info form';
-        grid-template-columns: 4fr 6fr;
-    }
 
     .left-info{
         @extend .right-info;
         border-radius: 8px 0px 0px 8px;
+        transform: translate3d(150%, 0, 0); // - 100 make it start from left
+        @include easeOut;
+        &.show{
+            transform: translate3d(0, 0, 0); //restore
+        }
     }
 
     .singup-form{
         @extend .singin-form;
+        transform: translate3d(-60%, 0, 0); // - 100 make it start from right
+        
+        &.show{
+            transform: translate3d(0, 0, 0); //restore
+        }
     }
 
 }
